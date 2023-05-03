@@ -1,6 +1,7 @@
 valido = true
 verdadeiro = true
 custo = 0
+confirmado = true
 
 while(valido){
     bebida = prompt("Qual bebida você quer? As opções são café, chá e chocolate quente.")
@@ -47,13 +48,15 @@ while (verdadeiro) {
             alert("Complemento não selecionado.");
             continue; // vai para o próximo loop de repetição do while sem executar o restante do código
     }
-    while (verdadeiro) {
+    while (confirmado) {
         resposta = prompt("Você gostaria de adicionar outro complemento? (sim ou não)");
         if (resposta === "sim") {
             verdadeiro = true;
+            confirmado = false;
             break; // sai do loop atual e volta para o loop anterior
         } else if (resposta === "não") {
             verdadeiro = false;
+            confirmado = false;
             break; // sai do loop atual e do loop anterior
         } else {
             alert("Resposta inválida. Digite 'sim' ou 'não'.");
